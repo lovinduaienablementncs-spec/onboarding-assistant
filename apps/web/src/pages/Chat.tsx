@@ -59,7 +59,9 @@ export function Chat() {
       .catch(() => navigate("/"));
   }, [conversationId, navigate]);
 
-  useEffect(() => bottom.current?.scrollIntoView({ behavior: "smooth" }), [messages, status]);
+  useEffect(() => {
+    bottom.current?.scrollIntoView({ behavior: "smooth" });
+  }, [messages, status]);
 
   async function send(text: string) {
     if (!text.trim() || busy) return;

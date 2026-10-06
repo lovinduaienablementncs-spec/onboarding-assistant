@@ -24,7 +24,9 @@ export function Settings() {
   const { data: history, reload: reloadHistory } = useApi<Array<{ version: number; active: boolean; changedBy: string; createdAt: string }>>("/admin/settings/history");
   const [s, setS] = useState<AssistantSettings>();
   const [message, setMessage] = useState<string>();
-  useEffect(() => setS(data), [data]);
+  useEffect(() => {
+    setS(data);
+  }, [data]);
   if (!s) return <Loading error={error} loading />;
 
   const set = <K extends keyof AssistantSettings>(group: K, key: keyof AssistantSettings[K], value: unknown) =>
