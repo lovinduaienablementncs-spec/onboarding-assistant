@@ -1,0 +1,22 @@
+{
+  "name": "@oa/api",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "tsc -b",
+    "dev": "tsx watch --env-file=../../.env src/main.ts"
+  },
+  "dependencies": {
+    "@oa/db": "0.1.0",
+    "@oa/ingestion": "0.1.0",
+    "@oa/shared": "0.1.0",
+    "@oa/worker": "0.1.0",
+    "drizzle-orm": "^0.44.0",
+    "fastify": "^5.2.0",
+    "jose": "^6.0.0",
+    "zod": "^3.24.0",
+    "@anthropic-ai/sdk": "^0.131.0",
+    "@oa/agents": "0.1.0"
+  }
+}

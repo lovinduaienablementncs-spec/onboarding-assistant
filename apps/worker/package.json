@@ -1,0 +1,28 @@
+{
+  "name": "@oa/worker",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    "./queue": {
+      "types": "./src/queue.ts",
+      "default": "./dist/queue.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc -b",
+    "dev": "tsx watch --env-file=../../.env src/main.ts"
+  },
+  "dependencies": {
+    "@oa/db": "0.1.0",
+    "@oa/ingestion": "0.1.0",
+    "@oa/shared": "0.1.0",
+    "bullmq": "^5.40.0",
+    "drizzle-orm": "^0.44.0",
+    "ioredis": "^5.4.0",
+    "@anthropic-ai/sdk": "^0.131.0",
+    "@oa/agents": "0.1.0",
+    "@oa/video": "0.1.0",
+    "sharp": "^0.35.0"
+  }
+}

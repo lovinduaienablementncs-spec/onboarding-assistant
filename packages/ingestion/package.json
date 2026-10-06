@@ -1,0 +1,20 @@
+{
+  "name": "@oa/ingestion",
+  "version": "0.1.0",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": { ".": { "types": "./src/index.ts", "default": "./dist/index.js" } },
+  "scripts": { "build": "tsc -b" },
+  "dependencies": {
+    "@azure/identity": "^4.5.0",
+    "@oa/db": "0.1.0",
+    "@oa/shared": "0.1.0",
+    "drizzle-orm": "^0.44.0",
+    "mammoth": "^1.9.0",
+    "node-html-parser": "^7.0.0",
+    "pdfjs-dist": "^5.0.0",
+    "picomatch": "^4.0.0"
+  },
+  "devDependencies": { "@types/picomatch": "^4.0.0" }
+}

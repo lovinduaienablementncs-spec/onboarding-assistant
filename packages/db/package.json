@@ -1,0 +1,19 @@
+{
+  "name": "@oa/db",
+  "version": "0.1.0",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": { ".": { "types": "./src/index.ts", "default": "./dist/index.js" } },
+  "scripts": {
+    "build": "tsc -b",
+    "generate": "drizzle-kit generate",
+    "migrate": "tsx --env-file=../../.env src/migrate.ts"
+  },
+  "dependencies": {
+    "@oa/shared": "0.1.0",
+    "drizzle-orm": "^0.44.0",
+    "postgres": "^3.4.0"
+  },
+  "devDependencies": { "drizzle-kit": "^0.31.0" }
+}

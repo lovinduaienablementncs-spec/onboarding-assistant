@@ -1,0 +1,1 @@
+ALTER TABLE "documents" ADD COLUMN "parser_version" integer DEFAULT 0 NOT NULL;

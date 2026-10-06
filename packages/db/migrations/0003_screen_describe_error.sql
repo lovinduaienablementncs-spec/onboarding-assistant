@@ -1,0 +1,1 @@
+ALTER TABLE "screens" ADD COLUMN "describe_error" text;
